@@ -1,0 +1,34 @@
+[
+  {
+    "name": "נחמה",
+    "email": "מ@ע",
+    "password": "353468",
+    "address": "",
+    "isLecturer": true,
+    "id": 1
+  },
+  {
+    "name": "גיננדי",
+    "email": "k@g",
+    "password": "123489",
+    "address": "בני ברק",
+    "isLecturer": true,
+    "id": 2
+  },
+  {
+    "name": "דינה",
+    "email": "chedvar1959@gmail.com",
+    "password": "445566",
+    "address": "הכלנית 12",
+    "isLecturer": true,
+    "id": 3
+  },
+  {
+    "name": "אסנת",
+    "email": "c0556731959@gmail.com",
+    "password": "115599",
+    "address": "המכבים 45",
+    "isLecturer": true,
+    "id": 4
+  }
+]

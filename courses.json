@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "C",
+    "categoryId": "5",
+    "lessonsCount": 0,
+    "startDate": "2024-09-10T12:32:04.070Z",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Frontal",
+    "lecturerId": 11,
+    "imagePath": "assets/course-images/image2.jpg",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "name": "python",
+    "categoryId": "1",
+    "lessonsCount": 10,
+    "startDate": "2025-04-12",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Zoom",
+    "lecturerId": 3,
+    "imagePath": "assets/course-images/image7.jpg",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "name": "html",
+    "categoryId": "2",
+    "lessonsCount": 15,
+    "startDate": "2024-12-01",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Frontal",
+    "lecturerId": 4,
+    "imagePath": "assets/course-images/image5.jpg",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "מערכות הפעלה",
+    "categoryId": 0,
+    "lessonsCount": 10,
+    "startDate": "2024-11-04",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Zoom",
+    "lecturerId": 4,
+    "imagePath": "assets/course-images/image9.jpg",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "ניתוח מערכות",
+    "categoryId": "6",
+    "lessonsCount": 0,
+    "startDate": "2025-02-14",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Frontal",
+    "lecturerId": 4,
+    "imagePath": "assets/course-images/image6.jpg",
+    "description": ""
+  }
+]
