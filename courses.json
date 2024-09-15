@@ -68,5 +68,19 @@
     "lecturerId": 4,
     "imagePath": "assets/course-images/image6.jpg",
     "description": ""
+  },
+  {
+    "id": 6,
+    "name": "גג",
+    "categoryId": 0,
+    "lessonsCount": 0,
+    "startDate": "2025-02-01",
+    "syllabus": [
+      ""
+    ],
+    "learningMode": "Frontal",
+    "lecturerId": 5,
+    "imagePath": "",
+    "description": ""
   }
 ]

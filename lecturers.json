@@ -30,5 +30,29 @@
     "address": "המכבים 45",
     "isLecturer": true,
     "id": 4
+  },
+  {
+    "name": "שרי",
+    "email": "",
+    "password": "123455",
+    "address": "",
+    "isLecturer": true,
+    "id": 5
+  },
+  {
+    "name": "חדוי",
+    "email": "",
+    "password": "112255",
+    "address": "",
+    "isLecturer": true,
+    "id": 6
+  },
+  {
+    "name": "dd",
+    "email": "",
+    "password": "114477",
+    "address": "",
+    "isLecturer": true,
+    "id": 7
   }
 ]

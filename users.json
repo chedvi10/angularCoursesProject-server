@@ -14,5 +14,13 @@
     "address": "אור החיים 12",
     "isLecturer": false,
     "id": 2
+  },
+  {
+    "name": "אילה",
+    "email": "chedvar1959@gmail.com",
+    "password": "151515",
+    "address": "",
+    "isLecturer": false,
+    "id": 3
   }
 ]

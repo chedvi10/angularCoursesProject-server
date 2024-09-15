@@ -24,29 +24,29 @@ function saveJsonFile(filename, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 function saveUsers(users) {
-    saveJsonFile('users.json', users);
-  }
-  
+  saveJsonFile('users.json', users);
+}
+
 let users = readJsonFile('users.json');
 let courses = readJsonFile('courses.json');
 let categories = readJsonFile('categories.json');
 let lecturers = readJsonFile('lecturers.json');
 
 app.get('/api/courses', (req, res) => {
-    res.json(courses);
-  });
-  
-  app.get('/api/courses/:id', (req, res) => {
-    const courseId = parseInt(req.params.id);
-    const course = courses.find(c => c.id === courseId);
-    
-    if (course) {
-      res.json(course);
-    } else {
-      res.status(404).json({ message: 'הקורס לא נמצא' });
-    }
-  });
-  
+  res.json(courses);
+});
+
+app.get('/api/courses/:id', (req, res) => {
+  const courseId = parseInt(req.params.id);
+  const course = courses.find(c => c.id === courseId);
+
+  if (course) {
+    res.json(course);
+  } else {
+    res.status(404).json({ message: 'הקורס לא נמצא' });
+  }
+});
+
 app.get('/api/categories', (req, res) => {
   res.json(categories);
 });
@@ -56,15 +56,15 @@ app.get('/api/lecturers', (req, res) => {
 });
 app.get('/api/users/:id', (req, res) => {
   const userId = parseInt(req.params.id);
-  
+
   // חיפוש במערך המרצים
   user = lecturers.find(l => l.id === userId);
-  
+
   if (user) {
     res.json({ ...user, role: 'lecturer' });
     return;
   }
-  
+
   // אם המשתמש לא נמצא
   res.status(404).json({ message: 'משתמש לא נמצא' });
 });
@@ -81,28 +81,28 @@ app.post('/api/add-course', (req, res) => {
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  let lecturers=readJsonFile('lecturers.json');
+  let lecturers = readJsonFile('lecturers.json');
   // בדיקה אם המשתמש קיים (בין אם כמשתמש רגיל או כמרצה)
   const userExists = users.find(u => u.name === username) || lecturers.find(l => l.name === username);
-  
+
   // בדיקה במערך המשתמשים הרגילים
   const user = users.find(u => u.name === username && u.password === password);
-  
+
   if (user) {
     console.log("uuuuuuuuuu");
     res.json({ success: true, user, role: 'user' });
     return;
   }
-  
+
   // בדיקה במערך המרצים
   const lecturer = lecturers.find(l => l.name === username && l.password === password);
-  
+
   if (lecturer) {
     console.log("lllllllllllllll");
     res.json({ success: true, user: lecturer, role: 'lecturer' });
     return;
   }
-  
+
   // אם המשתמש קיים אבל הסיסמה שגויה
   if (userExists) {
     res.status(401).json({ success: false, message: 'סיסמה שגויה', errorType: 'wrongPassword' });
@@ -151,14 +151,15 @@ app.put('/api/courses/:id', (req, res) => {
   }
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 app.post('/api/verify-lecturer-code', (req, res) => {
   const { code } = req.body;
   console.log('Received code:');
   console.log(code); // לוג לבדיקה
   const validCode = '1234'; // החליפי זאת בקוד האמיתי שלך
   res.json(code === validCode);
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
